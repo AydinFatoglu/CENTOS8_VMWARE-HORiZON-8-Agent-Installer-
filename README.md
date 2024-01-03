@@ -1,7 +1,6 @@
 # CENTOS8_VMWARE-HORiZON-8-Agent-Installer
 
-Paste and GO Install : 
-
+Paste and GO Install : yum install wget -y -y && wget https://raw.githubusercontent.com/AydinFatoglu/Xibo-Linux-PlayerOS-centos7/main/centos8.sh && chmod +x install.sh && ./install.sh
 
 agent download link at: https://drive.google.com/uc?export=download&id=1pDYooCTyLQAP9HCWuWTicceR_QkFuSKZ
 
