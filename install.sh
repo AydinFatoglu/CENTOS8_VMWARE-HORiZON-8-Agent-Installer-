@@ -146,20 +146,13 @@ sudo dnf install xorg-x11-drv-vmware -y
 
 tar -xzvf VMware-horizonagent-linux-x86_64-2306-8.10.0-21968037.tar.gz
 cd VMware-horizonagent-linux-x86_64-2306-8.10.0-21968037
-sh ./install_viewagent.sh
-
-
+sh ./install_viewagent.sh -A yes
 
 echo "Configureing - SELINUX"
 
 setenforce 0
 sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
 sed '7s/^#//' -i /etc/gdm/custom.conf
-
-
-
-
-
 
 echo "Configureing Firewall"
 
