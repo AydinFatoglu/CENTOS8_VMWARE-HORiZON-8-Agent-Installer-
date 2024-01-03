@@ -4,7 +4,7 @@
 ###############
 xibouser=user
 loginpass=1234.
-domain=signage.local
+domain=domain.local
 systimezone=Europe/Istanbul 
 # use cmd to get the list: timedatectl list-timezones
 ###############
@@ -117,14 +117,38 @@ yum install wget -y
 
 echo "Installing VMware Horizon Agent Linux x86_64 2306-8.10.0-21968037 with Dependencies for CentOS 8 (Tarball)."
 
-wget https://drive.google.com/uc?export=download&id=1pDYooCTyLQAP9HCWuWTicceR_QkFuSKZ
 
+# Define the filename
+filename="VMware-horizonagent-linux-x86_64-2306-8.10.0-21968037.tar.gz"
 
+# Loop until the file is found
+while true; do
+    # Prompt the user
+    read -p "Please place $filename in the $(dirname "$0") directory and press Enter to continue..."
+
+    # Check if the file exists in the same directory as the script
+    if [ -f "$(dirname "$0")/$filename" ]; then
+        echo "File $filename found. Continuing..."
+        
+        
+        
+        break
+    else
+        echo "File $filename not found. Please try again."
+    fi
+done
 
 sudo dnf install epel-release -y -y
 sudo dnf install pulseaudio-utils -y
 sudo dnf install bc -y
 sudo dnf install xorg-x11-drv-vmware -y
+
+
+tar -xzvf VMware-horizonagent-linux-x86_64-2306-8.10.0-21968037.tar.gz
+cd VMware-horizonagent-linux-x86_64-2306-8.10.0-21968037
+sh ./install_viewagent.sh
+
+
 
 echo "Configureing - SELINUX"
 
