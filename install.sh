@@ -117,6 +117,10 @@ yum install wget -y
 
 echo "Installing VMware Horizon Agent Linux x86_64 2306-8.10.0-21968037 with Dependencies for CentOS 8 (Tarball)."
 
+wget https://drive.google.com/uc?export=download&id=1pDYooCTyLQAP9HCWuWTicceR_QkFuSKZ
+
+
+
 sudo dnf install epel-release -y -y
 sudo dnf install pulseaudio-utils -y
 sudo dnf install bc -y
