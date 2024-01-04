@@ -147,7 +147,7 @@ sudo dnf install pulseaudio-module-x11 -y
 
 tar -xzvf VMware-horizonagent-linux-x86_64-2306-8.10.0-21968037.tar.gz
 cd VMware-horizonagent-linux-x86_64-2306-8.10.0-21968037
-sh ./install_viewagent.sh -A yes
+sh ./install_viewagent.sh -A yes --multiple-session -M no --no-hosted-app
 
 echo "Configureing - SELINUX"
 
