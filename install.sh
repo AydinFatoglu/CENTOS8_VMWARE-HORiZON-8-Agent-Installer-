@@ -142,6 +142,7 @@ sudo dnf install epel-release -y -y
 sudo dnf install pulseaudio-utils -y
 sudo dnf install bc -y
 sudo dnf install xorg-x11-drv-vmware -y
+sudo dnf install pulseaudio-module-x11 -y
 
 
 tar -xzvf VMware-horizonagent-linux-x86_64-2306-8.10.0-21968037.tar.gz
